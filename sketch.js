@@ -17,7 +17,13 @@ class Drop {
     if (this.y >= this.env) {
       this.y = 0
       this.x = random(800)
+      // this.speed *= -1
     }
+    //  else if (this.y <= 0) {
+    //   this.x = random(800)
+    //   this.speed *= -1
+    // }
+
   }
 }
 
