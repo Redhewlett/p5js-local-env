@@ -7,7 +7,7 @@ class Drop {
   }
 
   show() {
-    stroke("white")
+    stroke("red")
     strokeWeight(random(2))
     point(this.x, this.y)
   }
@@ -25,7 +25,6 @@ let drops = []
 
 function setup() {
   createCanvas(800, 500)
-  // drop = new Drop(10, 10, 1, height)
   for (let i = 0; i < width; i += 1) {
     let dr = new Drop(random(0, width), random(10, width), random(5, 1), height)
     drops.push(dr)
@@ -33,8 +32,11 @@ function setup() {
 }
 
 function draw() {
-  background(000)
-
+  // background(250)
+  let dice = round(random(10))
+  if (dice === 1) {
+    background(250)
+  }
   drops.forEach((drop) => {
     drop.fall()
     drop.show()
